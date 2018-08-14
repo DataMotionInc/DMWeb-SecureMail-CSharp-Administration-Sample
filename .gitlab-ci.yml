@@ -1,0 +1,21 @@
+#image: compulim/msbuild
+image: didstopia/msbuild
+before_script:
+  - nuget restore -NonInteractive
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    #Build DLLs in Release mode
+    - msbuild.exe Build.proj /p:Configuration=Release /p:Platform="Any CPU" /p:build_number=1.0.0.0
+    #- mkbundle --list-targets
+    #- mkbundle -o "Messaging Rest Sample" --simple "Messaging REST GUI.exe" --machine-config /etc/mono/4.5/machine.config
+  #artifacts:
+    #paths:
+      #- "Consolidated Unit Tests-4.5.2/bin/Debug/TestResult.xml"
+      #- "Consolidated Unit Tests-3.5/bin/Debug/TestResult.xml"
+      #- "Messaging Library-4.5.2/bin/Release/MessagingLibrary-4.5.2.dll"
+      #- "Messaging Library-3.5/bin/Release/MessagingLibrary-3.5.dll"

@@ -1039,6 +1039,7 @@ namespace DMAdmin_GUI
                             deleteUserIdTextBox.ResetText();
                             deleteSingleSignOnIdTextBox.ResetText();
 
+                            deleteRichTextBox.Text = "User has been deleted successfully.";
                             EndWaitCursor();
                         }
                         catch (Exception ex)

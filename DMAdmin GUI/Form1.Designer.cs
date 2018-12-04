@@ -241,7 +241,7 @@
             this.authenticationBaseURLTextBox.Name = "authenticationBaseURLTextBox";
             this.authenticationBaseURLTextBox.Size = new System.Drawing.Size(366, 24);
             this.authenticationBaseURLTextBox.TabIndex = 1;
-            this.authenticationBaseURLTextBox.Text = "https://securemailbeta.datamotion.com";
+            this.authenticationBaseURLTextBox.Text = "https://ssl.datamotion.com";
             // 
             // authenticationbaseURLLabel
             // 
